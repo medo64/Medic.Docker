@@ -1,0 +1,10 @@
+services:
+  medic:
+    container_name: medic
+    image: medo64/medic:latest
+    restart: unless-stopped
+    environment:
+      - TZ=America/Los_Angeles
+      - LOG_LEVEL=DEBUG
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
